@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/mmcnichol/pteralerts#readme",
   "dependencies": {
+    "express": "^4.13.4",
     "nodemailer": "^2.3.0"
   }
 }
