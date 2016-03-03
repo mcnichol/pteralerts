@@ -1,0 +1,30 @@
+{
+  "name": "pteralerts",
+  "version": "0.0.1",
+  "description": "Alert user when dependencies/specific mentions found in Pivotal Tracker",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmcnichol/pteralerts.git"
+  },
+  "keywords": [
+    "alerts",
+    "email",
+    "sms",
+    "mms",
+    "pivotal",
+    "tracker"
+  ],
+  "author": "Michael McNichol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmcnichol/pteralerts/issues"
+  },
+  "homepage": "https://github.com/mmcnichol/pteralerts#readme",
+  "dependencies": {
+    "nodemailer": "^2.3.0"
+  }
+}
