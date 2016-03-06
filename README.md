@@ -5,6 +5,9 @@ This project integrates with existing [Pivotal Tracker API](http://www.pivotaltr
 
 ##Dependencies
 These must be installed (whether globally or not is up to your configuration) in order to follow through with the installation steps.
+* [bower](https://github.com/bower/bower) - Managing front-end libraries (AngularJS & Angular Mocks)
+* [node](https://github.com/nodejs/node)
+* [jasmine](https://github.com/jasmine/jasmine)
 
 ##Installation
 
