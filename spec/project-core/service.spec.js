@@ -12,6 +12,7 @@ describe('ProjectCore', function() {
 
     afterEach(function(){
         $httpBackend.verifyNoOutstandingExpectation();
+        $httpBackend.verifyNoOutstandingRequest();
     });
 
 	it('should create a project', function() {
@@ -40,7 +41,7 @@ describe('ProjectCore', function() {
         expect($httpBackend.flush).not.toThrow();
     });
 
-    it('should get project by id', function(){
+    it('should update a project', function(){
         $httpBackend.expectPUT('project')
             .respond(200);
         var project = new Projects({
@@ -49,6 +50,31 @@ describe('ProjectCore', function() {
         });
         project.$update();
 
+        expect($httpBackend.flush).not.toThrow();
+    });
+
+    it('should authenticate requests', function(){
+        var matchAny = /.*/;
+        var headerData = function(headers){
+            return angular.fromJson(headers)['X-TrackerToken'] === 'MY_PT_API_TOKEN';
+        };
+
+        $httpBackend.whenGET(matchAny,headerData)
+            .respond(200);
+        $httpBackend.expectPOST(matchAny, matchAny, headerData)
+            .respond(200);
+        $httpBackend.expectPUT(matchAny, matchAny, headerData)
+            .respond(200);
+        $httpBackend.expectDELETE(matchAny, headerData)
+            .respond(200);
+
+        var project = {projectId: '123', name: 'projectName'};
+        Projects.query();
+        Projects.get({ projectId: '123'});
+        new Projects(project).$save();
+        new Projects(project).$update();
+        new Projects(project).$remove();
+        
         expect($httpBackend.flush).not.toThrow();
     });
 });

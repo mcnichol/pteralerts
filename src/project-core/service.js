@@ -1,6 +1,6 @@
 angular.module('projectCore', ['ngResource'])
 	.factory('Projects', function($resource) {
-        var token = '';
+        var token = 'MY_PT_API_TOKEN';
 		return $resource('project/:projectId', { projectId: '@id' }, {
 			update: {
 				method: 'PUT',
