@@ -1,5 +1,7 @@
-#PTeralerts
-##Pivotal TrackER ALERTS....you know it's funny
+#pteralerts
+
+<img src="http://vignette1.wikia.nocookie.net/scribblenauts/images/4/49/Pterodactyl.png/revision/latest?cb=20130321190600" width="200" height="200" />
+##**P**ivotal **T**rackER **ALERTS**....you know it's funny
 
 This project integrates with existing [Pivotal Tracker API](http://www.pivotaltracker.com/help/api#top).  From a user interface you will be able to enter key dependencies or integration points and receive alerts whenever one is discovered.
 
