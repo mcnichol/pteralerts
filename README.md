@@ -10,9 +10,8 @@ These must be installed (whether globally or not is up to your configuration) in
 * [jasmine](https://github.com/jasmine/jasmine)
 
 ##Installation
-
-* ```git clone https://github.com/mcnichol/pteralerts.git```
-* ```cd pteralerts```
-* ```bower install```
-* ```npm install```
-
+* `git clone https://github.com/mcnichol/pteralerts.git`
+* `cd pteralerts`
+* `npm install bower -g`
+* `bower install`
+* `npm install`
