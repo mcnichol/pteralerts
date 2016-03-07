@@ -3,29 +3,40 @@ angular.module('pteralert',[])
     var service = {};
     var baseUrl = 'https://www.pivotaltracker.com/services/v5/';
 
-    service.getmynotifications = function(params){
+    function httpRequest(req){
         var deferred = $q.defer();
+        $http(req)
+            .success(function(data){
+                deferred.resolve(data);
+            })
+            .error(function(){
+                deferred.reject();
+            });
+        return deferred.promise;
+    }
+
+    service.getmynotifications = function(params){
         var req = {
             method: 'GET',
             url: baseUrl + 'my/notifications',
+            data: {'envelope': true},
             headers: {
                 'X-TrackerToken': params.token 
             }
         };
-        $http(req)
-            .success(function(data){
-                deferred.resolve(data);
-            });
-        return deferred.promise;
+        return httpRequest(req); 
     };
 
-    service.getme = function(query){
-        var deferred = $q.defer();
-        $http.get(baseUrl + 'me')
-            .success(function(data){
-                deferred.resolve(data);
-            });
-        return deferred.promise;
+    service.getme = function(params){
+        var req = {
+            method: 'GET',
+            url: baseUrl + 'me',
+            headers: {
+                'X-TrackerToken': params.token
+            }
+        };
+        return httpRequest(req);
+        
     };
     return service;
 });

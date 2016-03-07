@@ -4,7 +4,7 @@
   "description": "Alert user when dependencies/specific mentions found in Pivotal Tracker",
   "main": "app.js",
   "scripts": {
-    "start": "node node_modules\\nodemon\\bin\\nodemon app.js", 
+    "start": "node node_modules\\nodemon\\bin\\nodemon app.js",
     "test": "node node_modules\\karma\\bin\\karma start karma.conf.js"
   },
   "repository": {
@@ -33,9 +33,11 @@
   },
   "devDependencies": {
     "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
     "karma": "^0.13.21",
     "karma-chrome-launcher": "^0.2.2",
     "karma-jasmine": "^0.3.7",
-    "karma-phantomjs-launcher": "^1.0.0"
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs": "^2.1.3"
   }
 }
