@@ -4,6 +4,7 @@
   "description": "Alert user when dependencies/specific mentions found in Pivotal Tracker",
   "main": "app.js",
   "scripts": {
+    "build": "bower install & npm install",
     "start": "node node_modules\\nodemon\\bin\\nodemon app.js", 
     "test": "node node_modules\\karma\\bin\\karma start karma.conf.js"
   },
