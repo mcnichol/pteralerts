@@ -4,6 +4,7 @@
   "description": "Alert user when dependencies/specific mentions found in Pivotal Tracker",
   "main": "app.js",
   "scripts": {
+    "start": "node node_modules\\nodemon\\bin\\nodemon app.js", 
     "test": "node node_modules\\karma\\bin\\karma start karma.conf.js"
   },
   "repository": {
@@ -27,6 +28,7 @@
   "dependencies": {
     "express": "^4.13.4",
     "nodemailer": "^2.3.0",
+    "nodemon": "^1.9.1",
     "request": "^2.69.0"
   },
   "devDependencies": {
