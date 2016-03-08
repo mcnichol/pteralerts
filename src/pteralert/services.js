@@ -21,10 +21,10 @@ angular.module('pteralert',[])
             url: baseUrl + 'my/notifications',
             data: {'envelope': true},
             headers: {
-                'X-TrackerToken': params.token 
+                'X-TrackerToken': params.token
             }
         };
-        return httpRequest(req); 
+        return httpRequest(req);
     };
 
     service.getme = function(params){
@@ -36,7 +36,7 @@ angular.module('pteralert',[])
             }
         };
         return httpRequest(req);
-        
+
     };
     return service;
 });

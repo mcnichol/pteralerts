@@ -1,4 +1,4 @@
-angular.module('projectApp',[])
+angular.module('projectApp')
     .controller('SearchController',function($scope,$location){
         $scope.search = function(){
             if($scope.query){

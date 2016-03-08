@@ -1,5 +1,4 @@
 describe('ProjectCore', function() {
-	
 	var Projects;
 	var $httpBackend;
 
@@ -21,7 +20,7 @@ describe('ProjectCore', function() {
         };
 
         $httpBackend.expectPOST(/./,expectedData)
-            .respond(201);        
+            .respond(201);
 
         var project = new Projects({
             projectId: '123',
@@ -35,7 +34,6 @@ describe('ProjectCore', function() {
     it('should get project by id', function(){
         $httpBackend.expectGET('project/123')
             .respond(200);
-        
         Projects.get({projectId: '123'});
 
         expect($httpBackend.flush).not.toThrow();
@@ -74,7 +72,7 @@ describe('ProjectCore', function() {
         new Projects(project).$save();
         new Projects(project).$update();
         new Projects(project).$remove();
-        
+
         expect($httpBackend.flush).not.toThrow();
     });
 });
