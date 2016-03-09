@@ -16,6 +16,7 @@ app.use(express.static(__dirname + '/src'));
 app.use('/angular',express.static(__dirname + '/bower_components/angular'));
 app.use('/angular-resource', express.static(__dirname + '/bower_components/angular-resource'));
 app.use('/pteralerts', express.static(__dirname + '/src'));
+app.use('/bootstrap', express.static(__dirname + '/bower_components/bootstrap/dist'));
 
 //REST API ROUTER Management
 var apiRouter = require('./src/routes/apiRoutes')(params);
