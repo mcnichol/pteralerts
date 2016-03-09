@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="projectApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pteralerts</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style type="text/css">
+        .container { max-width: 9000px; }
+    </style>
+    
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="page-header">
+                <h1><a href="#/">PTerAlerts</a></h1>
+                <p class="lead">Your resource for Project Alerts.</p>
+            </div>
+            <div ng-controller="SearchController">
+                <form class="form-inline-lg" ng-submit="search()">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Integration Name..." ng-model="query">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="search()">Go!</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div ng-view=""></div>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        <div class="container">
+        </div>
+    </div>
+    <script type="text/javascript" src="/angular/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.1/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.4/ui-bootstrap-tpls.min.js"></script>
+
+    <script type="text/javascript" src="/pteralerts/project-app/app.js"></script>
+    <script type="text/javascript" src="/pteralerts/pteralert/services.js"></script>
+    <script type="text/javascript" src="/pteralerts/project-app/results.controller.js"></script>
+    <script type="text/javascript" src="/pteralerts/project-app/search.controller.js"></script>
+</body>
+</html>

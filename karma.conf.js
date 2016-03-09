@@ -17,8 +17,10 @@ module.exports = function(config) {
     files: [
         'bower_components/angular/angular.min.js',
         'bower_components/angular-resource/angular-resource.min.js',
+        'bower_components/angular-route/angular-route.min.js',
         'bower_components/angular-mocks/angular-mocks.js',
-        'src/**/*.js',
+        'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
+        'src/!(routes)/**/*.js',
         'spec/**/*.js'
     ],
 

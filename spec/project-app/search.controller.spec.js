@@ -20,5 +20,5 @@ describe('Search Controller',function(){
         $scope.query = '';
         $scope.search();
         expect($location.url()).toBe('');
-    })
+    });
 });

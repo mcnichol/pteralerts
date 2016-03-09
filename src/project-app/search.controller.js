@@ -4,5 +4,5 @@ angular.module('projectApp')
             if($scope.query){
                 $location.path('/location').search('q',$scope.query);
             }
-        }
+        };
     });
